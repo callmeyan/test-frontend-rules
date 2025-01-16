@@ -4,9 +4,11 @@
   stages:
     - name: 安装依赖
       script: npm install
+    - name: test
+      script: npm run test
     - name: build
       script: npm run build
 
 release:
   push:
-    <<: *pipeline
+    - <<: *pipeline
