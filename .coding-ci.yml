@@ -1,13 +1,17 @@
 .pipeline: &pipeline
+  runner:
+    cpus: 2
   docker:
     image: node:20.11.1
   stages:
+    - name: 启用pnpm
+      script: corepack enable pnpm
     - name: 安装依赖
-      script: npm install
+      script: pnpm install
     - name: test
-      script: npm run test
+      script: pnpm run test
     - name: build
-      script: npm run build
+      script: pnpm run build
 
 release:
   push:

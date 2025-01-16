@@ -18,8 +18,6 @@ module.exports = {
         '@typescript-eslint/no-explicit-any': [
             'off'
         ],
-        'vue/max-attributes-per-line':'off',
-        'vue/html-self-closing':'off',
         'no-mixed-spaces-and-tabs': 'off',
         'no-control-regex': 0
     },
