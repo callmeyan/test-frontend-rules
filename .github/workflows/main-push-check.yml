@@ -1,0 +1,23 @@
+name: main build with pnpm
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: pnpm/action-setup@v4.0.0
+      name: install pnpm
+      with:
+        node-version: 20
+        cache: 'pnpm'
+    - name: Install dependencies
+      run: pnpm install
+    - name: Test
+      run: pnpm run test
+    - name: Build
+      run: pnpm run build
+    
+  
