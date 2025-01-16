@@ -7,6 +7,6 @@
     - name: build
       script: npm run build
 
-master:
+release:
   push:
     <<: *pipeline
