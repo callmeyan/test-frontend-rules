@@ -1,9 +1,10 @@
 {
   "name": "test-frontend-rules",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "license": "MIT",
+  "homepage": "https://callmeyan.github.io/test-frontend-rules/",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
