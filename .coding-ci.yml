@@ -1,0 +1,12 @@
+.pipeline: &pipeline
+  docker:
+    image: node:20.11.1
+  stages:
+    - name: 安装依赖
+      script: npm install
+    - name: build
+      script: npm run build
+
+master:
+  push:
+    <<: *pipeline
